@@ -1,1 +1,2854 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Material de Estudo — Geografia e Arte | Curso Preparatório Professora Samanta</title>
+
+<style>
+:root{
+  --orange:#f58b1f;
+  --dark:#15242b;
+  --blue:#315f76;
+  --green:#43805f;
+  --red:#b94e48;
+  --paper:#fffdf8;
+  --cream:#f4efe5;
+  --line:#ddd6ca;
+  --ink:#26363d;
+  --muted:#66757c;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  background:linear-gradient(180deg,#f6f1e8,#fff 35%,#f7f4ed);
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--ink);
+  line-height:1.55;
+}
+
+.container{
+  width:min(1120px,calc(100% - 28px));
+  margin:auto;
+}
+
+/* ================= CABEÇALHO ================= */
+
+header{
+  background:var(--dark);
+  color:white;
+  position:sticky;
+  top:0;
+  z-index:10;
+  box-shadow:0 4px 18px #0003;
+}
+
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  padding:10px 0;
+}
+
+.logo{
+  height:62px;
+  width:auto;
+  max-width:330px;
+  object-fit:contain;
+}
+
+.fallback{
+  display:none;
+  align-items:center;
+  gap:10px;
+}
+
+.fallback .mark{
+  width:48px;
+  height:48px;
+  border:4px solid var(--orange);
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  color:var(--orange);
+  font-weight:900;
+  font-size:28px;
+}
+
+.fallback b{
+  font-size:22px;
+}
+
+.fallback small{
+  display:block;
+  color:var(--orange);
+  letter-spacing:2px;
+}
+
+.tag{
+  text-align:right;
+  font-size:.78rem;
+  color:#dce4e7;
+}
+
+.tag strong{
+  display:block;
+  color:#fff;
+  font-size:1rem;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+  padding:48px 0 30px;
+}
+
+.kicker{
+  display:inline-block;
+  background:#fff0dc;
+  color:#99520f;
+  border:1px solid #f2c58d;
+  padding:6px 11px;
+  border-radius:99px;
+  font-size:.75rem;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.06em;
+}
+
+h1,h2,h3{
+  line-height:1.2;
+}
+
+h1{
+  font-family:Georgia,serif;
+  font-size:clamp(2rem,5vw,3.5rem);
+  margin:14px 0 10px;
+}
+
+h1 em{
+  font-style:normal;
+  color:var(--orange);
+}
+
+.lead{
+  font-size:1.08rem;
+  color:var(--muted);
+  max-width:900px;
+}
+
+.meta{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:12px;
+  margin-top:22px;
+}
+
+.meta-card{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:15px;
+  box-shadow:0 7px 22px #2632380a;
+}
+
+.meta-card b{
+  display:block;
+  font-size:1.55rem;
+  color:var(--blue);
+}
+
+.note,
+.callout{
+  margin-top:18px;
+  padding:15px 18px;
+  border-radius:13px;
+}
+
+.note{
+  background:#fff8e9;
+  border-left:5px solid var(--orange);
+}
+
+.callout{
+  background:#edf5f2;
+  border:1px solid #cfe0d8;
+}
+
+/* ================= SEÇÕES ================= */
+
+.section-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:15px;
+  margin:40px 0 16px;
+}
+
+.section-head h2{
+  font-family:Georgia,serif;
+  margin:0;
+  font-size:2rem;
+}
+
+.section-head p{
+  margin:0;
+  color:var(--muted);
+}
+
+.topic,
+.question,
+.analysis{
+  background:rgba(255,255,255,.94);
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:22px;
+  margin:16px 0;
+  box-shadow:0 7px 24px #2632380a;
+}
+
+.topic h3{
+  color:var(--blue);
+  margin-top:0;
+}
+
+.grid2{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+}
+
+.grid3{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+}
+
+/* ================= VISUAIS ================= */
+
+.visual{
+  background:#f8f5ee;
+  border:1px solid #e3dccf;
+  border-radius:15px;
+  padding:12px;
+  overflow:hidden;
+}
+
+.visual img{
+  width:100%;
+  max-height:410px;
+  object-fit:contain;
+  border-radius:10px;
+  background:#fff;
+}
+
+.caption{
+  font-size:.78rem;
+  color:var(--muted);
+  margin:7px 2px 0;
+}
+
+.info{
+  background:#fbfaf6;
+  border:1px solid #e5ded2;
+  border-radius:13px;
+  padding:14px;
+}
+
+.info h4{
+  margin:0 0 6px;
+  color:#344e5a;
+}
+
+.info p{
+  margin:0;
+  color:#58686f;
+  font-size:.93rem;
+}
+
+/* ================= TABELAS ================= */
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  background:#fff;
+  border-radius:12px;
+  overflow:hidden;
+}
+
+th,
+td{
+  border:1px solid #ddd8ce;
+  padding:9px 10px;
+  text-align:left;
+  vertical-align:top;
+}
+
+th{
+  background:#edf1f0;
+  color:#294451;
+}
+
+td{
+  font-size:.92rem;
+}
+
+/* ================= DIAGRAMAS ================= */
+
+.chips span{
+  display:inline-block;
+  padding:5px 9px;
+  margin:3px;
+  border-radius:99px;
+  background:#eef3f2;
+  color:var(--blue);
+  font-size:.78rem;
+  font-weight:700;
+}
+
+.diagram{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
+}
+
+.diagram div{
+  padding:13px;
+  border-radius:12px;
+  background:#fff;
+  border:1px solid #ddd5c9;
+  text-align:center;
+}
+
+.diagram .center{
+  grid-column:1/-1;
+  background:#1e3b47;
+  color:#fff;
+  font-weight:800;
+}
+
+/* ================= QUESTIONÁRIO ================= */
+
+.quiz-head{
+  background:#1d3038;
+  color:#fff;
+  border-radius:18px;
+  padding:22px;
+  margin-top:32px;
+}
+
+.quiz-head p{
+  color:#d8e2e5;
+}
+
+.question{
+  padding:18px;
+}
+
+.qtop{
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+}
+
+.qnum{
+  font-weight:900;
+  color:var(--orange);
+}
+
+.tagq{
+  font-size:.72rem;
+  background:#eef2f3;
+  color:#4d636d;
+  padding:4px 7px;
+  border-radius:99px;
+}
+
+.question h3{
+  font-size:1.02rem;
+  margin:10px 0;
+}
+
+.option{
+  display:block;
+  border:1px solid #d9d3c9;
+  border-radius:10px;
+  padding:10px 11px;
+  margin:7px 0;
+  cursor:pointer;
+  background:#fff;
+}
+
+.option:hover{
+  background:#faf5eb;
+}
+
+/* ================= BOTÕES ================= */
+
+.actions{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin:20px 0;
+}
+
+button{
+  border:0;
+  border-radius:99px;
+  padding:12px 18px;
+  font-weight:800;
+  cursor:pointer;
+}
+
+.primary{
+  background:var(--orange);
+}
+
+.secondary{
+  background:#e4eaeb;
+  color:#28434e;
+}
+
+/* ================= RESULTADOS ================= */
+
+.results{
+  display:none;
+}
+
+.results.show{
+  display:block;
+}
+
+.result-hero{
+  display:grid;
+  grid-template-columns:220px 1fr;
+  gap:22px;
+  align-items:center;
+}
+
+.pie-wrap{
+  display:grid;
+  place-items:center;
+}
+
+.pie{
+  width:180px;
+  height:180px;
+  border-radius:50%;
+  background:conic-gradient(
+    var(--green) 0 0%,
+    var(--red) 0 100%
+  );
+  position:relative;
+}
+
+.pie:after{
+  content:"";
+  position:absolute;
+  inset:35px;
+  background:#fff;
+  border-radius:50%;
+}
+
+.pie-label{
+  position:absolute;
+  z-index:2;
+  inset:0;
+  display:grid;
+  place-items:center;
+  font-size:1.5rem;
+  font-weight:900;
+}
+
+.score{
+  font-size:2.2rem;
+  font-weight:900;
+  color:var(--blue);
+  margin:0;
+}
+
+.analysis-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+}
+
+.bar-row{
+  display:grid;
+  grid-template-columns:175px 1fr 45px;
+  gap:9px;
+  align-items:center;
+  margin:12px 0;
+  font-size:.86rem;
+}
+
+.bar{
+  height:11px;
+  background:#e7e2da;
+  border-radius:99px;
+  overflow:hidden;
+}
+
+.fill{
+  height:100%;
+  background:var(--blue);
+  border-radius:99px;
+  width:0;
+}
+
+.feedback-item{
+  padding:12px;
+  border-left:4px solid var(--green);
+  background:#f1f8f3;
+  border-radius:8px;
+  margin:8px 0;
+}
+
+.feedback-item.difficult{
+  border-left-color:var(--red);
+  background:#fff2f0;
+}
+
+/* ================= PLANO DE ESTUDO ================= */
+
+.plan-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+}
+
+.plan{
+  background:#f7f4ed;
+  border:1px solid #ded7ca;
+  border-radius:13px;
+  padding:14px;
+}
+
+.plan b{
+  color:var(--blue);
+}
+
+/* ================= GABARITO ================= */
+
+.gabarito{
+  border:1px solid #e0d9cf;
+  border-radius:11px;
+  margin:8px 0;
+  overflow:hidden;
+}
+
+.gabarito summary{
+  cursor:pointer;
+  padding:11px 13px;
+  background:#f8f5ef;
+  font-weight:800;
+}
+
+.gabbody{
+  padding:12px 14px;
+  background:#fff;
+}
+
+.ok{
+  color:var(--green);
+}
+
+/* ================= RODAPÉ ================= */
+
+footer{
+  text-align:center;
+  color:#758087;
+  font-size:.8rem;
+  padding:35px 0 22px;
+}
+
+/* ================= RESPONSIVO ================= */
+
+@media(max-width:850px){
+
+  .meta{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .grid2,
+  .analysis-grid{
+    grid-template-columns:1fr;
+  }
+
+  .grid3,
+  .plan-grid,
+  .diagram{
+    grid-template-columns:1fr;
+  }
+
+  .diagram .center{
+    grid-column:auto;
+  }
+
+  .result-hero{
+    grid-template-columns:1fr;
+  }
+}
+
+@media(max-width:600px){
+
+  .header-inner{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+
+  .tag{
+    text-align:left;
+  }
+
+  .meta{
+    grid-template-columns:1fr;
+  }
+
+  .bar-row{
+    grid-template-columns:1fr;
+  }
+
+  .section-head{
+    display:block;
+  }
+
+  .section-head p{
+    margin-top:6px;
+  }
+}
+
+@media print{
+
+  header{
+    position:static;
+  }
+
+  .actions,
+  .results{
+    display:none!important;
+  }
+
+  .topic,
+  .question{
+    box-shadow:none;
+    break-inside:avoid;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- =====================================================
+     CABEÇALHO
+====================================================== -->
+
+<header>
+
+<div class="container header-inner">
+
+<a href="https://samanta-preparatorios.github.io/Aula-1-de-Ciencias/"
+target="_blank">
+
+<img
+class="logo"
+src="https://samanta-preparatorios.github.io/Aula-1-de-Ciencias/Logo%20preparatorio1.jpeg"
+alt="Logo Curso Preparatório Professora Samanta"
+onerror="
+this.style.display='none';
+this.nextElementSibling.style.display='flex';
+">
+
+<span class="fallback">
+
+<span class="mark">S</span>
+
+<span>
+<small>CURSO PREPARATÓRIO</small>
+<b>Professora Samanta</b>
+</span>
+
+</span>
+
+</a>
+
+<div class="tag">
+
+Material de revisão + diagnóstico
+
+<strong>Artes e Geografia</strong>
+
+</div>
+
+</div>
+
+</header>
+
+
+<main class="container">
+
+
+<!-- =====================================================
+     APRESENTAÇÃO
+====================================================== -->
+
+<section class="hero">
+
+<span class="kicker">
+Conteúdo programado
+</span>
+
+<h1>
+Geografia e Arte:
+<em>revisão visual</em>
+</h1>
+
+<p class="lead">
+
+Material de apoio baseado nos conteúdos programados:
+
+<strong>
+fatores climáticos;
+climas e vegetações mundiais;
+Arte Grega e Romana
+(capítulos 5 e 6).
+</strong>
+
+Ao final, o estudante responde a um diagnóstico de 20 questões
+e recebe uma análise automática de desempenho.
+
+</p>
+
+
+<div class="meta">
+
+<div class="meta-card">
+<b>20</b>
+<span>questões diagnósticas</span>
+</div>
+
+<div class="meta-card">
+<b>10 + 10</b>
+<span>Geografia + Arte</span>
+</div>
+
+<div class="meta-card">
+<b>4</b>
+<span>alternativas por questão</span>
+</div>
+
+<div class="meta-card">
+<b>100%</b>
+<span>gabarito comentado</span>
+</div>
+
+</div>
+
+
+<div class="note">
+
+<strong>Orientação:</strong>
+
+Faça a revisão primeiro.
+
+Depois responda às questões sem consultar o material.
+
+Clique em
+<strong>Corrigir e analisar desempenho</strong>
+para visualizar:
+
+<ul>
+<li>percentual de acertos;</li>
+<li>gráfico tipo pizza;</li>
+<li>conteúdos com maior facilidade;</li>
+<li>conteúdos com maior dificuldade;</li>
+<li>estudo orientado personalizado;</li>
+<li>gabarito comentado.</li>
+</ul>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     GEOGRAFIA
+====================================================== -->
+
+<div class="section-head">
+
+<div>
+
+<h2>1. GEOGRAFIA</h2>
+
+<p>
+Fatores climáticos + climas e vegetações mundiais
+</p>
+
+</div>
+
+</div>
+
+
+<!-- FATORES CLIMÁTICOS -->
+
+<section class="topic">
+
+<h3>
+1.1 Fatores climáticos
+</h3>
+
+<p>
+
+O clima é resultado da interação entre elementos atmosféricos
+e fatores geográficos.
+
+Entre os fatores mais cobrados estão:
+
+<strong>
+latitude, altitude, relevo, maritimidade,
+continentalidade, massas de ar e correntes marítimas.
+</strong>
+
+</p>
+
+
+<div class="grid2">
+
+
+<div class="visual">
+
+<svg
+viewBox="0 0 760 380"
+width="100%"
+role="img"
+aria-label="Infográfico de fatores climáticos"
+>
+
+<defs>
+
+<linearGradient
+id="sky"
+x1="0"
+x2="1">
+
+<stop
+offset="0"
+stop-color="#dcecf2"/>
+
+<stop
+offset="1"
+stop-color="#fff1d9"/>
+
+</linearGradient>
+
+</defs>
+
+<rect
+width="760"
+height="380"
+rx="18"
+fill="url(#sky)"
+/>
+
+<circle
+cx="95"
+cy="78"
+r="42"
+fill="#f5b83d"
+/>
+
+<path
+d="M0 300 Q150 235 300 300 T760 285 V380 H0Z"
+fill="#b9d3b1"
+/>
+
+<path
+d="M0 335 Q190 275 390 330 T760 325 V380 H0Z"
+fill="#6f9a73"
+/>
+
+<g
+font-family="Arial"
+font-size="22"
+font-weight="700"
+fill="#24323a"
+>
+
+<text x="25" y="48">
+Latitude
+</text>
+
+<text x="25" y="103">
+energia solar
+</text>
+
+<text x="520" y="55">
+Altitude
+</text>
+
+<text x="510" y="84">
+temperatura
+</text>
+
+<text x="25" y="215">
+Relevo
+</text>
+
+<text x="25" y="243">
+chuvas orográficas
+</text>
+
+<text x="475" y="210">
+Maritimidade
+</text>
+
+<text x="475" y="238">
+umidade + menor amplitude
+</text>
+
+<text x="190" y="365">
+Continentalidade • Massas de ar • Correntes marítimas
+</text>
+
+</g>
+
+</svg>
+
+</div>
+
+
+<div class="grid2">
+
+
+<div class="info">
+
+<h4>
+Latitude
+</h4>
+
+<p>
+
+Quanto maior a latitude, em geral,
+menor a incidência direta de energia solar
+e menores as temperaturas médias.
+
+</p>
+
+</div>
+
+
+<div class="info">
+
+<h4>
+Altitude
+</h4>
+
+<p>
+
+Em condições gerais,
+a temperatura diminui com o aumento da altitude.
+
+</p>
+
+</div>
+
+
+<div class="info">
+
+<h4>
+Maritimidade
+</h4>
+
+<p>
+
+A proximidade do oceano tende a suavizar
+as temperaturas e aumentar a influência da umidade.
+
+</p>
+
+</div>
+
+
+<div class="info">
+
+<h4>
+Continentalidade
+</h4>
+
+<p>
+
+Áreas distantes do mar costumam apresentar
+maior amplitude térmica.
+
+</p>
+
+</div>
+
+
+<div class="info">
+
+<h4>
+Relevo
+</h4>
+
+<p>
+
+Montanhas podem dificultar a passagem
+de massas de ar e favorecer chuvas orográficas.
+
+</p>
+
+</div>
+
+
+<div class="info">
+
+<h4>
+Massas de ar
+</h4>
+
+<p>
+
+Grandes volumes de ar com características
+próprias de temperatura e umidade.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="callout">
+
+<strong>Para a prova:</strong>
+
+se a questão falar em distância do mar,
+pense em <strong>maritimidade/continentalidade</strong>.
+
+Se falar em altura,
+pense em <strong>altitude</strong>.
+
+Se falar em distribuição da energia solar,
+pense em <strong>latitude</strong>.
+
+Se falar em barreira montanhosa,
+pense em <strong>relevo</strong>.
+
+</div>
+
+</section>
+
+
+
+<!-- CLIMAS -->
+
+<section class="topic">
+
+<h3>
+1.2 Climas e vegetações mundiais
+</h3>
+
+
+<div class="grid2">
+
+
+<div class="visual">
+
+<img
+src="https://commons.wikimedia.org/wiki/Special:FilePath/K%C3%B6ppen%20classification%20worldmap%20gray.png"
+alt="Mapa mundial da classificação climática de Köppen"
+loading="lazy"
+>
+
+<p class="caption">
+
+Mapa climático mundial de Köppen.
+
+Fonte:
+Wikimedia Commons — domínio público.
+
+</p>
+
+</div>
+
+
+<div>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Clima</th>
+
+<th>Características</th>
+
+<th>Vegetação associada</th>
+
+</tr>
+
+</thead>
+
+
+<tbody>
+
+
+<tr>
+
+<td>
+<strong>Equatorial</strong>
+</td>
+
+<td>
+Quente e muito úmido;
+chuvas abundantes.
+</td>
+
+<td>
+Floresta densa, perene e estratificada.
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+<strong>Tropical</strong>
+</td>
+
+<td>
+Temperaturas elevadas e
+sazonalidade das chuvas.
+</td>
+
+<td>
+Savanas e formações adaptadas à estação seca.
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+<strong>Desértico</strong>
+</td>
+
+<td>
+Chuvas muito escassas
+e forte aridez.
+</td>
+
+<td>
+Vegetação xerófila e esparsa.
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+<strong>Mediterrâneo</strong>
+</td>
+
+<td>
+Verão quente e seco;
+inverno mais chuvoso.
+</td>
+
+<td>
+Vegetação adaptada à seca do verão.
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+<strong>Temperado</strong>
+</td>
+
+<td>
+Estações mais marcadas
+ao longo do ano.
+</td>
+
+<td>
+Florestas temperadas e campos.
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+<strong>Polar</strong>
+</td>
+
+<td>
+Temperaturas muito baixas
+e inverno prolongado.
+</td>
+
+<td>
+Tundra em áreas menos extremas;
+gelo em áreas extremas.
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+
+<div
+class="diagram"
+style="margin-top:14px"
+>
+
+<div class="center">
+
+CLIMA → temperatura + umidade → condições para a vegetação
+
+</div>
+
+
+<div>
+
+<strong>Equatorial</strong>
+
+<br>
+
+calor + muita água
+
+<br>
+
+🌳 floresta densa
+
+</div>
+
+
+<div>
+
+<strong>Tropical</strong>
+
+<br>
+
+chuvas sazonais
+
+<br>
+
+🌾 savana
+
+</div>
+
+
+<div>
+
+<strong>Desértico</strong>
+
+<br>
+
+aridez
+
+<br>
+
+🌵 vegetação xerófila
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ARTE
+====================================================== -->
+
+<div class="section-head">
+
+<div>
+
+<h2>
+2. ARTE
+</h2>
+
+<p>
+Arte Grega e Romana — capítulos 5 e 6
+</p>
+
+</div>
+
+</div>
+
+
+
+<!-- ARTE GREGA -->
+
+<section class="topic">
+
+<h3>
+2.1 Arte Grega
+</h3>
+
+
+<div class="grid2">
+
+
+<div>
+
+<p>
+
+A arte grega valorizou
+
+<strong>
+equilíbrio, proporção, harmonia
+e representação do corpo humano.
+</strong>
+
+A arquitetura dos templos desenvolveu
+diferentes ordens de colunas.
+
+</p>
+
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Ordem</th>
+
+<th>Como reconhecer</th>
+
+</tr>
+
+</thead>
+
+
+<tbody>
+
+<tr>
+
+<td>
+<strong>Dórica</strong>
+</td>
+
+<td>
+Robusta e mais simples;
+capitel sem volutas.
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+<strong>Jônica</strong>
+</td>
+
+<td>
+Capitel com volutas em espiral.
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+<strong>Coríntia</strong>
+</td>
+
+<td>
+Capitel ornamentado com folhas de acanto.
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+
+<div class="visual">
+
+<img
+src="https://commons.wikimedia.org/wiki/Special:FilePath/Parthenon.jpg"
+alt="Partenon em Atenas"
+loading="lazy"
+>
+
+<p class="caption">
+
+Partenon, exemplo de arquitetura grega.
+
+Fonte:
+Wikimedia Commons — domínio público.
+
+</p>
+
+</div>
+
+</div>
+
+
+<div class="chips">
+
+<span>
+Arcaico: maior rigidez
+</span>
+
+<span>
+Clássico: equilíbrio e proporção
+</span>
+
+<span>
+Helenístico: movimento e expressividade
+</span>
+
+</div>
+
+</section>
+
+
+
+<!-- ARTE ROMANA -->
+
+<section class="topic">
+
+<h3>
+2.2 Arte Romana
+</h3>
+
+
+<div class="grid2">
+
+
+<div class="visual">
+
+<img
+src="https://commons.wikimedia.org/wiki/Special:FilePath/Roman%20Colosseum%20Rom.jpg"
+alt="Coliseu romano"
+loading="lazy"
+>
+
+<p class="caption">
+
+Coliseu, exemplo de monumentalidade
+e engenharia romana.
+
+Fonte:
+Wikimedia Commons — domínio público.
+
+</p>
+
+</div>
+
+
+<div>
+
+<p>
+
+A arte romana recebeu forte influência grega,
+mas destacou-se também pela
+
+<strong>
+engenharia, funcionalidade, monumentalidade,
+retratos, mosaicos e afrescos.
+</strong>
+
+</p>
+
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Elemento</th>
+
+<th>Função / importância</th>
+
+</tr>
+
+</thead>
+
+
+<tbody>
+
+<tr>
+
+<td>
+Arco
+</td>
+
+<td>
+Vencer vãos e ampliar possibilidades construtivas.
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+Abóbada
+</td>
+
+<td>
+Cobrir grandes espaços internos.
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+Concreto romano
+</td>
+
+<td>
+Permitir estruturas complexas e resistentes.
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+Retrato
+</td>
+
+<td>
+Valorizar identidade e representação de pessoas.
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+Mosaico e afresco
+</td>
+
+<td>
+Decorar ambientes e representar temas visuais.
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+
+<div class="callout">
+
+<strong>Comparação rápida:</strong>
+
+Grécia → harmonia, proporção, idealização.
+
+Roma → influência grega + retratos,
+monumentalidade, engenharia e grandes obras públicas.
+
+</div>
+
+</section>
+
+
+
+<!-- COMPARAÇÃO -->
+
+<section class="topic">
+
+<h3>
+Quadro comparativo — Grécia × Roma
+</h3>
+
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Aspecto</th>
+
+<th>Grega</th>
+
+<th>Romana</th>
+
+</tr>
+
+</thead>
+
+
+<tbody>
+
+<tr>
+
+<td>
+Arquitetura
+</td>
+
+<td>
+Templos e ordens de colunas.
+</td>
+
+<td>
+Arcos, abóbadas, concreto e grandes obras.
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+Escultura
+</td>
+
+<td>
+Equilíbrio e idealização do corpo.
+</td>
+
+<td>
+Retratos e maior individualização.
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+Influência
+</td>
+
+<td>
+Base para diversas tradições posteriores.
+</td>
+
+<td>
+Absorveu e difundiu referências gregas.
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+Função social
+</td>
+
+<td>
+Religiosa, cívica e estética.
+</td>
+
+<td>
+Religiosa, política, comemorativa e utilitária.
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</section>
+
+
+
+<!-- =====================================================
+     QUESTIONÁRIO
+====================================================== -->
+
+<section class="quiz-head">
+
+<h2 style="margin:0">
+
+3. QUESTIONÁRIO DIAGNÓSTICO
+
+</h2>
+
+<p>
+
+20 questões — 10 de Geografia e 10 de Arte.
+
+Responda sem consultar o material.
+
+O resultado será calculado automaticamente.
+
+</p>
+
+</section>
+
+
+<form id="quiz"></form>
+
+
+<div class="actions">
+
+<button
+class="primary"
+type="button"
+onclick="corrigir()"
+>
+
+✓ Corrigir e analisar desempenho
+
+</button>
+
+
+<button
+class="secondary"
+type="button"
+onclick="limparQuiz()"
+>
+
+↺ Limpar respostas
+
+</button>
+
+</div>
+
+
+
+<!-- =====================================================
+     RESULTADOS
+====================================================== -->
+
+<section id="results" class="results">
+
+
+<div class="topic result-hero">
+
+
+<div class="pie-wrap">
+
+<div
+class="pie"
+id="pie"
+>
+
+<div
+class="pie-label"
+id="pieLabel"
+>
+0%
+</div>
+
+</div>
+
+</div>
+
+
+<div>
+
+<p
+class="score"
+id="scoreText"
+>
+0/20
+</p>
+
+<p id="scoreMessage"></p>
+
+<p
+style="color:var(--muted);font-size:.9rem"
+>
+
+O gráfico mostra a proporção entre
+acertos e erros.
+
+O diagnóstico por conteúdo considera
+o desempenho em cada bloco.
+
+</p>
+
+</div>
+
+</div>
+
+
+
+<div class="analysis-grid">
+
+
+<div class="analysis">
+
+<h3>
+📊 Desempenho por conteúdo
+</h3>
+
+<div id="bars"></div>
+
+</div>
+
+
+<div class="analysis">
+
+<h3>
+🎯 Facilidades e dificuldades
+</h3>
+
+<div id="feedback"></div>
+
+</div>
+
+</div>
+
+
+
+<div class="analysis">
+
+<h3>
+📚 Estudo orientado
+</h3>
+
+<div id="studyPlan"></div>
+
+</div>
+
+
+
+<div class="analysis">
+
+<h3>
+📝 Gabarito comentado
+</h3>
+
+<p style="color:var(--muted)">
+
+Abra cada questão para ver a alternativa correta,
+seu resultado e a explicação.
+
+</p>
+
+<div id="answerKey"></div>
+
+</div>
+
+</section>
+
+
+
+<footer>
+
+Curso Preparatório Professora Samanta
+
+· Material de apoio para revisão e diagnóstico
+
+· Artes e Geografia
+
+</footer>
+
+
+</main>
+
+
+
+<script>
+
+/* =====================================================
+   BANCO DE QUESTÕES
+===================================================== */
+
+const questoes = [
+
+{
+area:"Geografia",
+tema:"Fatores climáticos",
+dif:"Básico",
+
+q:"Qual fator climático está diretamente relacionado à quantidade de radiação solar recebida por uma região?",
+
+o:[
+"Latitude",
+"Altitude",
+"Relevo",
+"Maritimidade"
+],
+
+a:0,
+
+c:"A latitude interfere no ângulo de incidência dos raios solares. Em geral, regiões de menor latitude recebem maior quantidade de energia solar."
+},
+
+
+{
+area:"Geografia",
+tema:"Fatores climáticos",
+dif:"Básico",
+
+q:"Uma cidade localizada em área muito elevada tende a apresentar temperaturas mais baixas do que outra ao nível do mar. O fator destacado é:",
+
+o:[
+"Continentalidade",
+"Altitude",
+"Latitude",
+"Corrente marítima"
+],
+
+a:1,
+
+c:"A altitude está relacionada à elevação do relevo. Em condições gerais, a temperatura diminui à medida que a altitude aumenta."
+},
+
+
+{
+area:"Geografia",
+tema:"Fatores climáticos",
+dif:"Intermediário",
+
+q:"Uma cidade litorânea costuma apresentar menor amplitude térmica do que uma cidade no interior. Isso se relaciona principalmente à:",
+
+o:[
+"Altitude",
+"Latitude",
+"Maritimidade",
+"Declividade"
+],
+
+a:2,
+
+c:"A água do oceano aquece e esfria mais lentamente que a terra, ajudando a suavizar as variações de temperatura."
+},
+
+
+{
+area:"Geografia",
+tema:"Fatores climáticos",
+dif:"Intermediário",
+
+q:"Quando uma cadeia de montanhas força uma massa de ar úmida a subir e provoca chuva em uma encosta, evidencia-se a influência do:",
+
+o:[
+"Relevo",
+"Equador",
+"Meridiano",
+"Fuso horário"
+],
+
+a:0,
+
+c:"O relevo pode obrigar o ar a subir. O resfriamento do ar favorece condensação e precipitação, caracterizando chuva orográfica."
+},
+
+
+{
+area:"Geografia",
+tema:"Climas e vegetações",
+dif:"Básico",
+
+q:"Qual combinação apresenta maior coerência com o clima equatorial?",
+
+o:[
+"Frio intenso + vegetação rasteira",
+"Calor + alta umidade + floresta densa",
+"Verão seco + vegetação mediterrânea",
+"Chuvas escassas + vegetação xerófila"
+],
+
+a:1,
+
+c:"O clima equatorial é quente e muito úmido, favorecendo florestas densas e perenes."
+},
+
+
+{
+area:"Geografia",
+tema:"Climas e vegetações",
+dif:"Básico",
+
+q:"A vegetação típica de regiões desérticas apresenta adaptações relacionadas principalmente à:",
+
+o:[
+"Excesso de água",
+"Ausência de estações",
+"Escassez de água",
+"Baixa salinidade"
+],
+
+a:2,
+
+c:"A aridez dos desertos seleciona plantas xerófilas, adaptadas à escassez de água."
+},
+
+
+{
+area:"Geografia",
+tema:"Climas e vegetações",
+dif:"Intermediário",
+
+q:"Uma região apresenta verão quente e seco e inverno mais ameno e chuvoso. Qual clima é mais característico?",
+
+o:[
+"Polar",
+"Equatorial",
+"Mediterrâneo",
+"Desértico"
+],
+
+a:2,
+
+c:"O verão quente e seco e o inverno mais chuvoso são marcas do clima mediterrâneo."
+},
+
+
+{
+area:"Geografia",
+tema:"Climas e vegetações",
+dif:"Intermediário",
+
+q:"Em muitas áreas tropicais, a vegetação apresenta adaptações a uma estação chuvosa e outra seca. Um exemplo é:",
+
+o:[
+"Savana",
+"Tundra",
+"Floresta polar",
+"Gelo permanente"
+],
+
+a:0,
+
+c:"A savana está associada a ambientes tropicais com forte sazonalidade das chuvas."
+},
+
+
+{
+area:"Geografia",
+tema:"Climas e vegetações",
+dif:"Avançado",
+
+q:"Dois locais estão na mesma latitude, mas um é litorâneo e outro está no interior. Por que o local interiorano pode apresentar maior amplitude térmica?",
+
+o:[
+"Maior influência da maritimidade",
+"Maior influência da continentalidade",
+"Maior quantidade de oceanos",
+"Maior proximidade do Equador"
+],
+
+a:1,
+
+c:"A continentalidade reduz a influência moderadora do oceano. Áreas interiores tendem a ter maior amplitude térmica."
+},
+
+
+{
+area:"Geografia",
+tema:"Climas e vegetações",
+dif:"Avançado",
+
+q:"Qual associação está correta?",
+
+o:[
+"Polar — floresta equatorial densa",
+"Desértico — vegetação xerófila",
+"Equatorial — tundra",
+"Mediterrâneo — gelo permanente"
+],
+
+a:1,
+
+c:"A vegetação xerófila apresenta adaptações à aridez e à escassez de água, característica de áreas desérticas e semiáridas."
+},
+
+
+/* ================= ARTE ================= */
+
+{
+area:"Arte",
+tema:"Arte Grega",
+dif:"Básico",
+
+q:"Qual característica é frequentemente associada à arte grega clássica?",
+
+o:[
+"Busca por equilíbrio e proporção",
+"Ausência de representação humana",
+"Predomínio de construções sem colunas",
+"Rejeição da geometria"
+],
+
+a:0,
+
+c:"A arte grega clássica valorizou equilíbrio, proporção, harmonia e estudo das formas humanas."
+},
+
+
+{
+area:"Arte",
+tema:"Arte Grega",
+dif:"Básico",
+
+q:"Qual ordem arquitetônica grega apresenta capitel com volutas em espiral?",
+
+o:[
+"Dórica",
+"Jônica",
+"Coríntia",
+"Romana"
+],
+
+a:1,
+
+c:"A ordem jônica é reconhecida pelas volutas, formas espirais de seus capitéis."
+},
+
+
+{
+area:"Arte",
+tema:"Arte Grega",
+dif:"Intermediário",
+
+q:"A escultura grega clássica buscava representar o corpo humano principalmente por meio de:",
+
+o:[
+"Proporção, equilíbrio e idealização",
+"Distorções aleatórias",
+"Ausência de movimento",
+"Representações exclusivamente geométricas"
+],
+
+a:0,
+
+c:"A tradição clássica estudou o corpo humano com atenção às proporções, ao equilíbrio e à idealização."
+},
+
+
+{
+area:"Arte",
+tema:"Arte Grega",
+dif:"Intermediário",
+
+q:"A tendência de maior expressividade e movimento é especialmente associada ao período:",
+
+o:[
+"Arcaico",
+"Clássico inicial",
+"Helenístico",
+"Pré-histórico"
+],
+
+a:2,
+
+c:"A arte helenística ampliou a expressividade, o dinamismo e a dramaticidade das representações."
+},
+
+
+{
+area:"Arte",
+tema:"Arte Grega",
+dif:"Avançado",
+
+q:"Um templo possui colunas robustas e capitel simples, sem as volutas da ordem jônica. A ordem mais provável é:",
+
+o:[
+"Dórica",
+"Jônica",
+"Coríntia",
+"Gótica"
+],
+
+a:0,
+
+c:"A ordem dórica é mais robusta e simples. A jônica apresenta volutas e a coríntia possui folhas de acanto."
+},
+
+
+{
+area:"Arte",
+tema:"Arte Romana",
+dif:"Básico",
+
+q:"Qual elemento arquitetônico foi amplamente utilizado pelos romanos e favoreceu grandes construções?",
+
+o:[
+"Arco",
+"Vitral gótico",
+"Contraforte medieval",
+"Móbile"
+],
+
+a:0,
+
+c:"O arco foi fundamental para pontes, aquedutos, anfiteatros e outras grandes obras romanas."
+},
+
+
+{
+area:"Arte",
+tema:"Arte Romana",
+dif:"Básico",
+
+q:"Uma característica marcante da arquitetura romana foi a combinação entre arte e:",
+
+o:[
+"Engenharia e funcionalidade",
+"Ausência de planejamento",
+"Pequena escala obrigatória",
+"Recusa de técnicas construtivas"
+],
+
+a:0,
+
+c:"Os romanos desenvolveram soluções de engenharia e construíram obras monumentais, funcionais e duradouras."
+},
+
+
+{
+area:"Arte",
+tema:"Arte Romana",
+dif:"Intermediário",
+
+q:"Os romanos receberam forte influência cultural e artística de qual civilização?",
+
+o:[
+"Grega",
+"Inca",
+"Asteca",
+"Egípcia exclusivamente"
+],
+
+a:0,
+
+c:"Roma incorporou muitas referências gregas e as reinterpretou de acordo com suas necessidades políticas, sociais e culturais."
+},
+
+
+{
+area:"Arte",
+tema:"Arte Romana",
+dif:"Intermediário",
+
+q:"Mosaicos e afrescos romanos eram utilizados principalmente para:",
+
+o:[
+"Decorar ambientes e comunicar temas visuais",
+"Substituir estradas",
+"Medir a temperatura",
+"Construir aquedutos"
+],
+
+a:0,
+
+c:"Mosaicos e afrescos foram importantes formas de decoração e representação visual em residências e edifícios."
+},
+
+
+{
+area:"Arte",
+tema:"Arte Romana",
+dif:"Avançado",
+
+q:"Qual alternativa melhor diferencia uma tendência frequente da arte grega clássica de uma tendência marcante da arte romana?",
+
+o:[
+"Gregos: equilíbrio e idealização; romanos: retratos, monumentalidade e engenharia",
+"Gregos: arcos de concreto; romanos: rejeição da arquitetura",
+"Gregos: ausência de escultura; romanos: ausência de pintura",
+"Gregos: mosaicos apenas; romanos: somente cerâmica"
+],
+
+a:0,
+
+c:"A arte grega clássica é frequentemente associada à proporção, equilíbrio e idealização. Roma absorveu referências gregas e destacou-se também por retratos, monumentalidade, obras públicas e engenharia."
+}
+
+];
+
+
+
+/* =====================================================
+   CRIAÇÃO AUTOMÁTICA DAS QUESTÕES
+===================================================== */
+
+const quiz =
+document.getElementById("quiz");
+
+
+quiz.innerHTML =
+questoes.map((x,i)=>`
+
+<article class="question">
+
+<div class="qtop">
+
+<span class="qnum">
+Questão ${i+1}
+</span>
+
+<span class="tagq">
+${x.area} · ${x.tema} · ${x.dif}
+</span>
+
+</div>
+
+
+<h3>
+${x.q}
+</h3>
+
+
+${x.o.map((op,j)=>`
+
+<label class="option">
+
+<input
+type="radio"
+name="q${i}"
+value="${j}"
+>
+
+<strong>
+${String.fromCharCode(65+j)})
+</strong>
+
+${op}
+
+</label>
+
+`).join("")}
+
+</article>
+
+`).join("");
+
+
+
+/* =====================================================
+   ORIENTAÇÕES DE ESTUDO
+===================================================== */
+
+const regras = {
+
+"Fatores climáticos":
+
+"Revise latitude, altitude, maritimidade, continentalidade e relevo. Faça exercícios de associação entre uma situação-problema e o fator climático envolvido.",
+
+
+"Climas e vegetações":
+
+"Monte pares clima → temperatura/chuva → vegetação. Priorize as diferenças entre equatorial, tropical, desértico, mediterrâneo, temperado e polar.",
+
+
+"Arte Grega":
+
+"Revise as ordens dórica, jônica e coríntia e a sequência arcaico → clássico → helenístico. Use imagens para treinar o reconhecimento visual.",
+
+
+"Arte Romana":
+
+"Revise arco, abóbada, concreto, monumentalidade, retrato, mosaico e afresco. Compare cada característica com a arte grega."
+
+};
+
+
+
+/* =====================================================
+   CORREÇÃO
+===================================================== */
+
+function corrigir(){
+
+let acertos=0;
+
+let respondidas=0;
+
+const porTema={};
+
+
+questoes.forEach((x,i)=>{
+
+porTema[x.tema] ??=
+{
+total:0,
+acertos:0
+};
+
+porTema[x.tema].total++;
+
+
+const el=
+document.querySelector(
+`input[name="q${i}"]:checked`
+);
+
+
+if(el){
+
+respondidas++;
+
+
+if(+el.value===x.a){
+
+acertos++;
+
+porTema[x.tema].acertos++;
+
+}
+
+}
+
+});
+
+
+const pct=
+Math.round(
+acertos/questoes.length*100
+);
+
+
+document
+.getElementById("results")
+.classList
+.add("show");
+
+
+document
+.getElementById("scoreText")
+.textContent=
+`${acertos}/${questoes.length} — ${pct}%`;
+
+
+document
+.getElementById("pieLabel")
+.textContent=
+pct+"%";
+
+
+document
+.getElementById("pie")
+.style
+.background=
+`conic-gradient(
+var(--green) 0 ${pct}%,
+var(--red) ${pct}% 100%
+)`;
+
+
+let msg;
+
+
+if(pct>=90){
+
+msg=
+"Excelente domínio! Mantenha a revisão e corrija apenas os pontos que ainda apresentarem erro.";
+
+}
+
+else if(pct>=75){
+
+msg=
+"Bom desempenho. A base está consistente, mas alguns conteúdos merecem revisão direcionada.";
+
+}
+
+else if(pct>=60){
+
+msg=
+"Desempenho intermediário. Use o diagnóstico para concentrar o estudo nos conteúdos com menor percentual.";
+
+}
+
+else{
+
+msg=
+"O resultado indica a necessidade de uma revisão estruturada antes de avançar.";
+
+}
+
+
+document
+.getElementById("scoreMessage")
+.innerHTML=
+msg+
+`<br>
+<span style="color:var(--muted)">
+${respondidas} de ${questoes.length} questões respondidas.
+</span>`;
+
+
+/* DESEMPENHO POR TEMA */
+
+const ordered=
+Object
+.entries(porTema)
+.map(([tema,d])=>({
+
+tema,
+
+p:
+Math.round(
+d.acertos/d.total*100
+),
+
+...d
+
+}))
+.sort(
+(a,b)=>b.p-a.p
+);
+
+
+document
+.getElementById("bars")
+.innerHTML=
+ordered
+.map(x=>`
+
+<div class="bar-row">
+
+<strong>
+${x.tema}
+</strong>
+
+<div class="bar">
+
+<div
+class="fill"
+style="width:${x.p}%"
+>
+</div>
+
+</div>
+
+<span>
+${x.p}%
+</span>
+
+</div>
+
+`)
+.join("");
+
+
+
+/* FACILIDADES E DIFICULDADES */
+
+const facil=
+ordered.filter(
+x=>x.p>=75
+);
+
+
+const dif=
+ordered.filter(
+x=>x.p<75
+);
+
+
+document
+.getElementById("feedback")
+.innerHTML=`
+
+<div class="feedback-item">
+
+<strong>
+Maior facilidade:
+</strong>
+
+${
+facil.length
+?
+facil
+.map(
+x=>`${x.tema} (${x.p}%)`
+)
+.join(", ")
+:
+"nenhum conteúdo atingiu 75%; faça revisão geral."
+}
+
+</div>
+
+
+<div class="feedback-item difficult">
+
+<strong>
+Maior dificuldade:
+</strong>
+
+${
+dif.length
+?
+dif
+.map(
+x=>`${x.tema} (${x.p}%)`
+)
+.join(", ")
+:
+"nenhum conteúdo ficou abaixo de 75%."
+}
+
+</div>
+`;
+
+
+
+/* PLANO DE ESTUDO */
+
+const top=
+ordered.slice(0,3);
+
+
+document
+.getElementById("studyPlan")
+.innerHTML=
+
+`
+
+<div class="plan-grid">
+
+${top.map((x,i)=>`
+
+<div class="plan">
+
+<b>
+
+${
+i+1
+}.
+
+${
+x.p<50
+?
+"Prioridade alta"
+:
+x.p<75
+?
+"Prioridade média"
+:
+"Manutenção"
+}
+
+—
+
+${x.tema}
+
+</b>
+
+
+<p>
+
+${regras[x.tema]}
+
+</p>
+
+
+<small>
+
+Desempenho:
+
+<strong>
+${x.p}%
+</strong>
+
+</small>
+
+</div>
+
+`).join("")}
+
+</div>
+
+
+<div class="callout">
+
+<strong>
+Sequência sugerida:
+</strong>
+
+1) retome a teoria do menor percentual;
+
+2) faça exercícios curtos sem consulta;
+
+3) corrija os erros pelo comentário;
+
+4) refaça as questões erradas após 24–48 horas;
+
+5) finalize com questões misturadas.
+
+</div>
+
+`;
+
+
+
+/* =====================================================
+   GABARITO COMENTADO
+===================================================== */
+
+document
+.getElementById("answerKey")
+.innerHTML=
+
+questoes
+.map((x,i)=>{
+
+const el=
+document.querySelector(
+`input[name="q${i}"]:checked`
+);
+
+const c=
+el
+?
++el.value
+:
+-1;
+
+
+const status=
+
+c===x.a
+?
+`<span class="ok">✓ Acertou</span>`
+
+:
+
+c===-1
+?
+`<span style="color:var(--red)">
+Não respondida
+</span>`
+
+:
+
+`<span style="color:var(--red)">
+✗ Errou
+</span>`;
+
+
+return `
+
+<details class="gabarito">
+
+<summary>
+
+${i+1}.
+
+${String.fromCharCode(65+x.a)})
+
+${x.o[x.a]}
+
+—
+
+${status}
+
+</summary>
+
+
+<div class="gabbody">
+
+<strong>
+Comentário:
+</strong>
+
+${x.c}
+
+</div>
+
+</details>
+
+`;
+
+})
+.join("");
+
+
+/* IR PARA RESULTADO */
+
+document
+.getElementById("results")
+.scrollIntoView({
+
+behavior:"smooth",
+
+block:"start"
+
+});
+
+}
+
+
+
+/* =====================================================
+   LIMPAR
+===================================================== */
+
+function limparQuiz(){
+
+document
+.querySelectorAll(
+'input[type="radio"]'
+)
+.forEach(
+x=>x.checked=false
+);
+
+
+document
+.getElementById("results")
+.classList
+.remove("show");
+
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+}
+
+</script>
+
+</body>
+</html>
